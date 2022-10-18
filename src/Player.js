@@ -37,7 +37,11 @@ export default class Player extends Entity
 	{
 		this.sprite.update(dt * (this.game.speed.value * 2));
 
-		if (this.game.isKeyDown('ArrowUp') && this.onFloor && !this.game.introRunning) {
+		if (this.game.isKeyDown('ArrowUp') // If the jump button is pressed
+			&& this.onFloor // We must be on the floor
+			&& !this.game.introRunning // The intro must not be running
+			&& (this.game.intro || this.game.time > 250) // We must be in the intro OR we must be 250 milliseconds into the game
+			) {
 			this.velocity.y = -400;
 		}
 
