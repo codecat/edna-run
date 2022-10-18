@@ -9,11 +9,21 @@ document.onkeydown = (e) => game.onKeyDown(e);
 document.onkeyup = (e) => game.onKeyUp(e);
 
 let lastTimestamp = 0;
+let lastHidden = false;
+
 let step = (timestamp) => {
-	let delta = timestamp - lastTimestamp;
-	lastTimestamp = timestamp;
-	game.update(delta);
-	game.render(ctx);
+	if (!document.hidden) {
+		let delta = timestamp - lastTimestamp;
+		if (lastHidden) {
+			delta = 0;
+		}
+		lastTimestamp = timestamp;
+		lastHidden = false;
+		game.update(delta);
+		game.render(ctx);
+	} else {
+		lastHidden = true;
+	}
 	window.requestAnimationFrame(step);
 };
 window.requestAnimationFrame(step);
