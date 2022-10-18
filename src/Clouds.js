@@ -8,7 +8,7 @@ export default class Clouds
 		this.game = game;
 
 		this.sprite = new Sprite(this.game.spritesheet);
-		this.sprite.addFrame(130, 186, 163, 42);
+		this.sprite.addFrame(186, 67, 163, 42);
 
 		this.clouds = [];
 		for (let i = 0; i < 3; i++) {

@@ -17,11 +17,11 @@ export default class Player extends Entity
 		this.onFloor = false;
 
 		this.spriteJump = new Sprite(this.game.spritesheet);
-		this.spriteJump.addFrame(2, 0, 64, 139);
+		this.spriteJump.addFrame(0, 0, 62, 139);
 
 		this.spriteWalk = new Sprite(this.game.spritesheet);
-		this.spriteWalk.addFrame(319, 0, 64, 139, 100); // right leg 50%
-		this.spriteWalk.addFrame(398, 0, 64, 139, 100); // left leg 50%
+		this.spriteWalk.addFrame(62, 0, 62, 139, 100); // right leg 50%
+		this.spriteWalk.addFrame(124, 0, 62, 139, 100); // left leg 50%
 	}
 
 	get sprite()

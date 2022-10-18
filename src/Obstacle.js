@@ -15,7 +15,7 @@ export default class Obstacle extends Entity
 			this.rect.y = this.game.floorHeight - this.rect.height;
 
 			this.sprite = new Sprite(this.game.spritesheet);
-			this.sprite.addFrame(7, 166, 89, 82);
+			this.sprite.addFrame(349, 0, 89, 82);
 
 		} else {
 			this.rect.width = 42;
@@ -28,8 +28,8 @@ export default class Obstacle extends Entity
 			}
 
 			this.sprite = new Sprite(this.game.spritesheet);
-			this.sprite.addFrame(187, 407, 69, 36);
-			this.sprite.addFrame(277, 407, 69, 36);
+			this.sprite.addFrame(186, 31, 69, 36);
+			this.sprite.addFrame(255, 31, 69, 36);
 		}
 	}
 

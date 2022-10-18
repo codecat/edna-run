@@ -17,9 +17,9 @@ export default class GiftCard extends Entity
 
 		this.sprite = new Sprite(this.game.spritesheet);
 		if (this.value == 500) {
-			this.sprite.addFrame(8, 427, 55, 31); // Google Play card
+			this.sprite.addFrame(186, 0, 55, 31); // Google Play card
 		} else if (this.value == 1000) {
-			this.sprite.addFrame(94, 427, 55, 31); // Target card
+			this.sprite.addFrame(241, 0, 55, 31); // Target card
 		}
 	}
 

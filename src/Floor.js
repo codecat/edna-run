@@ -7,7 +7,7 @@ export default class Floor
 		this.game = game;
 
 		this.sprite = new Sprite(this.game.spritesheet);
-		this.sprite.addFrame(17, 305, 682, 24);
+		this.sprite.addFrame(0, 139, 682, 24);
 	}
 
 	render(ctx)

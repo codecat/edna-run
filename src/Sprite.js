@@ -42,6 +42,8 @@ export default class Sprite
 		if (height == -1) {
 			height = frame.height;
 		}
+		x = Math.round(x);
+		y = Math.round(y);
 		ctx.drawImage(this.img, frame.x, frame.y, frame.width, frame.height, x, y, width, height);
 	}
 }
