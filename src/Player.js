@@ -37,7 +37,7 @@ export default class Player extends Entity
 	{
 		this.sprite.update(dt * (this.game.speed.value * 2));
 
-		if (this.game.isKeyPressed('ArrowUp') && this.onFloor) {
+		if (this.game.isKeyDown('ArrowUp') && this.onFloor) {
 			this.velocity.y = -400;
 		}
 
